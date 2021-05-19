@@ -1,0 +1,534 @@
+*{
+    --darkpink :rgb(151, 43, 79) ;
+    --white:rgb(235, 255, 255);
+    --pink:  #cd4773;
+    --orange :orange ;
+    scroll-behavior: smooth;
+    color: var(--white);
+}
+#load-img{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: 0px;
+    margin-left: -10px;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    opacity: 0.6;
+    z-index: 999999;
+}
+#load-pic{
+    position: absolute;
+    left: 45%;
+    width: 100px;
+    height: 100px;
+    animation: grow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: none;
+    transition: 2s;
+
+}
+@keyframes grow {
+    25%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(2);
+
+    }
+}
+main{
+    overflow-x: hidden;
+    width: 100vw;
+
+}
+#main-sign-in{
+    position: fixed;
+    top: -10px;
+    left: -10px;
+    overflow-x: hidden;
+    width: 100vw;
+
+    background-color: var(--pink);
+}
+li[class="dropdown-link"]{
+    background-color: transparent;
+    color: var(--darkpink);
+    border-radius: 5px;
+
+}
+#home{
+    width: 100vw;
+    background-color: var(--pink);
+    position: relative;
+   top: -10px;
+}
+#main{
+    position: fixed;
+    background-color:var(--pink);
+    width: inherit;
+    right: -3px;
+    opacity: 0.9;
+    z-index: 50;
+}
+#navbar{
+    width: 75vw;
+    background-color: transparent;
+    list-style-type: none;
+    float: right;
+    display: inline-flex;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    opacity: 1;
+    margin-top: 45px;
+
+}
+#main-sign-in{
+    position: fixed;
+    padding-right: 10px;
+    background-color:var(--pink);
+    width: inherit;
+    right: -3px;
+    opacity: 0.9;
+    z-index: 50;
+
+}
+li[class="nav-item"]{
+    padding: 20px;
+    padding-left: 70px;
+    font-weight: 600;
+    background-color: transparent;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+    background-color:transparent;
+    border-radius: 5px;
+    z-index: 22222;
+
+}
+.dropdown-content{
+    position: fixed;
+    display: none;
+    min-width: 200px;
+    background-color:  #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+    
+}
+.dropdown-content a{
+    color: var(--darkpink);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #f1f1f1;
+
+}
+.dropdown-content a:hover{
+    z-index: 222;
+    background-color: #ddd;
+}
+.dropdown:hover  .dropdown-content{
+    display: block;
+}
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#sign-in-btn{
+    background-color: transparent;
+    padding: 20px;
+    padding-right: 26px;
+    padding-left: 26px;
+    border-radius: 17px;
+    font-size: 0.8em;
+    font-weight: 700;
+    color: var(--white);
+    border: 3px solid var(--darkpink) ;
+    cursor: pointer;
+    position: relative;
+    left: 100px;
+    z-index: 500;
+
+}
+#sign-up-btn{
+    background:radial-gradient(var(--orange),var(--orange));
+    color: var(--white);
+    text-align: center;
+    position: relative;
+    bottom: 10px;
+    opacity: 0.9;
+    padding: 30px;
+    padding-right: 35px;
+    padding-left: 35px;
+    border: 2px solid var(--pink);
+    border-radius: 20px;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-left: 120px;
+    box-shadow: 0px 7px 13px var(--darkpink) ;
+    cursor: pointer;
+    position: relative;
+  overflow: hidden;
+}
+.icon:after {
+  
+    animation: shine 5s ease-in-out  infinite;
+    animation-fill-mode: forwards;  
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+  }
+  
+@keyframes shine{
+    10% {
+      opacity: 1;
+      top: -30%;
+      left: -30%;
+      transition-property: left, top, opacity;
+      transition-duration: 0.7s, 0.7s, 0.15s;
+      transition-timing-function: ease;
+    }
+    100% {
+      opacity: 0;
+      top: -30%;
+      left: -30%;
+      transition-property: left, top, opacity;
+    }
+  }
+#logo{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    padding-left: 45px;
+    padding-top: 20px;
+}
+#logo-small{
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+}
+#sign-up-btn:hover , #sign-in-btn:hover{
+    transform: translateY(8px);
+    transition: 0.7s;
+}
+.nav-item:hover{
+    color:  var(--darkpink) ;
+    transition: 0.8s;
+}
+
+#container{
+    width: inherit;
+    overflow: hidden;
+}
+#hero{
+    position: relative;
+    top: 100px;
+    left: 200px;
+    font-size: 7em;
+    font-weight: 800;
+    animation-name: fly-in ;
+    animation-duration: 2s;
+    transition: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+}
+#hero-txt{
+    text-align: justify;
+    font-size: 20px;
+    position: relative;
+    top: 60px;
+    left: 300px;
+    animation-name: fly-in2;
+    animation-delay: 0s;
+    animation-duration: 2s;
+    transition: 3s;
+    animation-timing-function: ease;
+}
+@keyframes fly-in {
+    0%{
+        display: none;
+    }
+    25%{
+        display: block;
+        position: relative;
+        left: -1000px;
+    }
+
+    100%{
+        position: relative;
+        left: 200px;
+    }
+}
+
+@keyframes fly-in2 {
+    0%{
+        display: none;
+    }
+    25%{
+        display: block;
+        position: relative;
+        left: -1000px;
+    }
+    100%{
+        position: relative;
+        left: 300px;
+    }
+}
+#free-trial{
+    padding: 40px;
+    border: 1px solid var(--darkpink);
+    border-radius: 20px;
+    position: relative;
+    bottom: 570px;
+    left: 300px;
+    font-size: 1em;
+    background:radial-gradient(var(--orange),var(--orange));
+    cursor: pointer;
+    box-shadow: 0px 7px 13px var(--darkpink) ;
+
+}
+ /* #container-2{
+    background-color: var(--darkpink);
+    width: inherit;
+    height: 700px;
+    padding: 0px;
+} */
+#man-img{
+    width: 700px;
+    height: 680px;
+    position: relative;
+    bottom: 440px;
+    left: 200px;
+    background-color: transparent;
+}
+#fly-img{
+    width: 300px;
+    height: 300px;
+    background-color: transparent;
+    position: relative;
+    bottom: 900px;
+    animation-name: plane;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    transition: 2s;
+    animation-timing-function: ease;
+}
+@keyframes plane {
+    0%{
+        display: none;
+    }
+    25%{
+        display: block;
+        position: relative;
+        right: -1000px;
+    }
+    100%{
+        right: 0px;
+    }
+}
+#menu:hover{
+    transform: translateY(8px);
+    transition: 0.7s;
+    
+}
+#overlay-menu{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    width: 0%;
+    height: 100%;
+    background-color:hsla(340, 57%, 54%,0.9) ;
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 10;
+}
+#small-list-items{
+    background-color: transparent;
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+}
+#close{
+    float: right;
+    background-color: inherit;
+    cursor: pointer;
+}
+#menu ,#logo-small{
+    display: none;
+}
+#sign-in{
+    background-color: whitesmoke;
+    overflow-x: hidden;
+}
+form{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 190px;
+    left: 35%;
+    width: 30vw;
+    height: 520px;
+    background-color:white;
+    border-radius: 60px ;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+#form-div{
+    padding-bottom: 500px;
+}
+#house{
+    overflow-y: hidden;
+    position: fixed;
+    opacity: 0.4;
+}
+#email,#password{
+    width: 70%;
+    height: 30px;
+    padding: 20px;
+    border-bottom: 3px solid ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: transparent;
+    color: var(--pink);
+    font-size: 1em;
+    text-align: start;
+}
+#email{
+    position: absolute;
+    top: 20%;
+}
+#password{
+    position:absolute;
+    top: 35%;
+}
+#email:focus , #password:focus{
+    outline: none;
+}
+#sign-in-form-btn{
+    position: absolute;
+    top: 60%;
+    width: 80%;
+    padding: 16px;
+    border-radius: 25px;
+    background-color: var(--pink);
+    border: none;
+    font-size: inherit;
+    transition: 0.8s;
+    cursor: pointer;
+}
+#sign-in-header{
+    color: var(--darkpink);
+    background-color: transparent;
+   
+}
+#sign-in-form-btn:hover{
+    background-color: var(--darkpink);
+    transition: 0.8s;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+}
+a p{
+    color: var(--darkpink);
+    cursor: pointer;
+    position: absolute;
+    top:50%;
+    transition: 0.5s;
+}
+a p:hover{
+    text-decoration: underline;
+}
+
+@media only screen and  (max-width:768px){
+    #main ,#man-img,#main-sign-in{
+        display: none;
+    }
+   #fly-img{
+       position: relative;
+       bottom: 380px;
+       left: 65%;
+        width: 150px;
+        height: 150px;
+    }
+    #hero{
+        position: relative;
+        left: 100px;
+        bottom: 50px;
+        font-size: 4em;
+        font-weight: 300;
+        animation: none;
+    }
+    #hero-txt{
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+        top: 90px;
+        left: 00px;
+        animation: none;
+
+    }
+    #logo-small{
+        background-color: transparent;
+        width: 100px;
+        height: 100px;
+        display: block;
+
+    }
+    #menu{
+        float: right;
+        position: relative;
+        top:20px;
+        background-color: transparent;
+        cursor: pointer;
+        display: block;
+    }
+    #free-trial{
+        top: 70px;
+        left: 10%;
+    }
+    form{
+        position: absolute;
+        left: 20%;
+        width: 60vw;
+        background-color:transparent;
+        border-radius: 30px ;
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    }
+    #email,#password{
+        height: 30px;
+
+    }
+    a p{
+        position: absolute;
+        right: 30%;
+    }
+    #house{
+        width: 900px;
+        height: 900px;
+    }
+
+        
+
+
+    
+}
